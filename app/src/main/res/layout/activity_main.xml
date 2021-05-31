@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Faça sua jogada!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/btn_pedra"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:onClick="jogar"
+        android:tag="pedra"
+        android:scaleType="centerCrop"
+        app:layout_constraintVertical_bias="0.01"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/white"
+        android:src="@drawable/pedra"/>
+
+    <ImageButton
+        android:id="@+id/btn_papel"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:onClick="jogar"
+        android:tag="papel"
+        android:scaleType="centerCrop"
+        app:layout_constraintVertical_bias="0.03"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_pedra"
+        android:background="@color/white"
+        android:src="@drawable/papel"/>
+
+    <ImageButton
+        android:id="@+id/btn_tesoura"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:onClick="jogar"
+        android:tag="tesoura"
+        android:scaleType="centerCrop"
+        app:layout_constraintVertical_bias="0.05"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_papel"
+        android:background="@color/white"
+        android:src="@drawable/tesoura"/>
+
+        <Button
+            android:id="@+id/btn_ver_historico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ver Histórico"
+            android:onClick="verHistorico"
+            android:layout_alignParentBottom="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_tesoura"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
