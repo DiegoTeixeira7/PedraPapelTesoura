@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,9 +60,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void verHistorico(View view) {
+        if(lista.isEmpty()) {
+            Toast.makeText(this, "Não há jogos registrados!", Toast.LENGTH_SHORT).show();
+        } else {
+            Intent it = new Intent(getBaseContext(), Historico.class);
+            startActivity(it);
+        }
     }
 
-    public List<String> getLista() {
+    public static List<String> getLista() {
         return lista;
     }
 

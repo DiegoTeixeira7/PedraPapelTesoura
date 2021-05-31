@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Resultado extends AppCompatActivity {
 
@@ -23,5 +24,11 @@ public class Resultado extends AppCompatActivity {
 
         TextView resultado = (TextView)findViewById(R.id.resultado);
         resultado.setText("Resultado: " + it.getStringExtra("resultado"));
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Toast.makeText(this, "Jogo reiniciado!", Toast.LENGTH_SHORT).show();
     }
 }
