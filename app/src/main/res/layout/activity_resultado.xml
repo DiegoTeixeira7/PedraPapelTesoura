@@ -19,21 +19,21 @@
             android:layout_marginLeft="45dp" >
 
             <TextView
-                android:id="@+id/jogador"
+                android:id="@+id/jogadaUsuario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20sp"
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/computador"
+                android:id="@+id/jogadaApp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10sp"
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/resultado"
+                android:id="@+id/jogo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10sp"

@@ -23,68 +23,70 @@ public class MainActivity extends AppCompatActivity {
         lista = new ArrayList<>();
     }
 
-    public void jogar(View view) {
-        String tag = view.getTag().toString();
-        String jogador = null;
-
-        if (tag.equals("pedra")) {
-            jogador = "Pedra";
-        } else if(tag.equals("papel")) {
-            jogador = "Papel";
-        } else {
-            jogador = "Tesoura";
-        }
-
-        //  Gerando número aleatório de 0 a 2
-        //  0: Pedra
-        //  1: Papel
-        //  2: Tesoura
-        Random random = new Random();
-        int range = random.nextInt(3);
-
-        List<String> jogadaComputador = new ArrayList<>();
-        jogadaComputador.add("Pedra");
-        jogadaComputador.add("Papel");
-        jogadaComputador.add("Tesoura");
-
-        String computador = jogadaComputador.get(range);
-
-        String resultado = duelo(jogador, computador);
-        lista.add(resultado);
-
-        Intent it = new Intent(getBaseContext(), Resultado.class);
-        it.putExtra("jogador", jogador);
-        it.putExtra("computador", computador);
-        it.putExtra("resultado", resultado);
-        startActivity(it);
-    }
-
-    public void verHistorico(View view) {
-        if(lista.isEmpty()) {
-            Toast.makeText(this, "Não há jogos registrados!", Toast.LENGTH_SHORT).show();
-        } else {
-            Intent it = new Intent(getBaseContext(), Historico.class);
-            startActivity(it);
-        }
-    }
-
     public static List<String> getLista() {
         return lista;
     }
 
-    private String duelo(String jogador, String computador) {
-        String resultado = "Empate";
+    public void jokenpo(View view) {
+        String tag = view.getTag().toString();
+        String jogadaUsuario;
 
-        if(jogador.equals("Pedra") && computador.equals("Tesoura") ||
-                jogador.equals("Tesoura") && computador.equals("Papel") ||
-                jogador.equals("Papel") && computador.equals("Pedra")) {
-            resultado = "Vitória";
-        } else if(computador.equals("Pedra") && jogador.equals("Tesoura") ||
-                computador.equals("Tesoura") && jogador.equals("Papel") ||
-                computador.equals("Papel") && jogador.equals("Pedra")) {
-            resultado = "Derrota";
+        if (tag.equals("pedra")) {
+            jogadaUsuario = "pedra";
+        } else if(tag.equals("papel")) {
+            jogadaUsuario = "papel";
+        } else {
+            jogadaUsuario = "tesoura";
         }
 
-        return resultado;
+        String jogadaApp = jogadaAPP();
+
+        String jogo;
+
+        if(jogadaUsuario.equals("pedra") && jogadaApp.equals("pedra")) {
+            jogo = "Empate";
+        } else if(jogadaUsuario.equals("papel") && jogadaApp.equals("papel")) {
+            jogo = "Empate";
+        } else if(jogadaUsuario.equals("tesoura") && jogadaApp.equals("tesoura")) {
+            jogo = "Empate";
+        } else if(jogadaUsuario.equals("pedra") && jogadaApp.equals("tesoura")) {
+            jogo = "Vitória";
+        } else if(jogadaUsuario.equals("tesoura") && jogadaApp.equals("papel")) {
+            jogo = "Vitória";
+        } else if(jogadaUsuario.equals("papel") && jogadaApp.equals("pedra")) {
+            jogo = "Vitória";
+        } else {
+            jogo = "Derrota";
+        }
+
+        lista.add(jogo);
+
+        Intent it = new Intent(this, Resultado.class);
+        it.putExtra("jogadaApp", jogadaApp);
+        it.putExtra("jogadaUsuario", jogadaUsuario);
+        it.putExtra("jogo", jogo);
+        startActivity(it);
+    }
+
+    public void historico(View view) {
+        if(!lista.isEmpty()) {
+            Intent it = new Intent(this, Historico.class);
+            startActivity(it);
+        } else {
+            Toast.makeText(this, "Não há jogos registrados!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private String jogadaAPP() {
+        Random random = new Random();
+        int numeroAleatorio = random.nextInt(3);
+
+        if(numeroAleatorio == 0) {
+            return "pedra";
+        } else if(numeroAleatorio == 1) {
+            return "papel";
+        } else {
+            return "tesoura";
+        }
     }
 }

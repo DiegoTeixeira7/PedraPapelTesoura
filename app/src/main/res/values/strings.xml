@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Pedra, Papel, Tesoura</string>
+    <string name="historico">Histórico</string>
+    <string name="facasuajogada">Faça sua jogada!</string>
 </resources>

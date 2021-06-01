@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import java.util.List;
+
 public class Historico extends AppCompatActivity {
 
     @Override
@@ -13,15 +15,20 @@ public class Historico extends AppCompatActivity {
         setContentView(R.layout.activity_historico);
         getSupportActionBar().hide();
 
-        TextView historico = (TextView)findViewById(R.id.hitorico);
+        inicialize();
+    }
 
-        StringBuilder resp = new StringBuilder();
-        int index = 1;
-        for(String str : MainActivity.getLista()){
-            resp.append(index).append(": ").append(str).append("\n");
-            index++;
+    private void inicialize() {
+        TextView resultadosAntigos = (TextView)findViewById(R.id.resultadosAntigos);
+
+        StringBuilder str = new StringBuilder();
+
+        List<String> lista = MainActivity.getLista();
+
+        for(int i=0; i<lista.size();i++) {
+            str.append(lista.get(i)).append("\n");
         }
 
-        historico.setText(resp.toString());
+        resultadosAntigos.setText(str.toString());
     }
 }
