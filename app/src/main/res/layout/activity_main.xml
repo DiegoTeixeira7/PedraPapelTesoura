@@ -6,71 +6,61 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/titulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:text="@string/facasuajogada"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:gravity="center">
 
-    <ImageButton
-        android:id="@+id/btn_pedra"
-        android:layout_width="150sp"
-        android:layout_height="150sp"
-        android:onClick="jokenpo"
-        android:tag="pedra"
-        android:scaleType="centerCrop"
-        app:layout_constraintVertical_bias="0.01"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titulo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/white"
-        android:src="@drawable/pedra"/>
-
-    <ImageButton
-        android:id="@+id/btn_papel"
-        android:layout_width="150sp"
-        android:layout_height="150sp"
-        android:onClick="jokenpo"
-        android:tag="papel"
-        android:scaleType="centerCrop"
-        app:layout_constraintVertical_bias="0.03"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_pedra"
-        android:background="@color/white"
-        android:src="@drawable/papel"/>
-
-    <ImageButton
-        android:id="@+id/btn_tesoura"
-        android:layout_width="150sp"
-        android:layout_height="150sp"
-        android:onClick="jokenpo"
-        android:tag="tesoura"
-        android:scaleType="centerCrop"
-        app:layout_constraintVertical_bias="0.05"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_papel"
-        android:background="@color/white"
-        android:src="@drawable/tesoura"/>
-
-        <Button
-            android:id="@+id/btn_ver_historico"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:id="@+id/textsReport"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/historico"
-            android:onClick="historico"
-            android:layout_alignParentBottom="true"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_tesoura"/>
+            android:orientation="vertical"
+            android:gravity="center">
 
+            <ImageButton
+                android:id="@+id/btn_pedra"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="20dp"
+                android:onClick="jokenpo"
+                android:tag="pedra"
+                android:scaleType="centerCrop"
+                android:background="@color/white"
+                android:src="@drawable/pedra"/>
+
+            <ImageButton
+                android:id="@+id/btn_papel"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="20dp"
+                android:onClick="jokenpo"
+                android:tag="papel"
+                android:scaleType="centerCrop"
+                android:background="@color/white"
+                android:src="@drawable/papel"/>
+
+            <ImageButton
+                android:id="@+id/btn_tesoura"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="20dp"
+                android:onClick="jokenpo"
+                android:tag="tesoura"
+                android:scaleType="centerCrop"
+                android:background="@color/white"
+                android:src="@drawable/tesoura"/>
+
+            <Button
+                android:id="@+id/btn_ver_historico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/historico"
+                android:onClick="historico"
+                android:layout_alignParentBottom="true" />
+
+        </LinearLayout>
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
