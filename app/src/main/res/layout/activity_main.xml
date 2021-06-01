@@ -13,14 +13,14 @@
         android:gravity="center">
 
         <LinearLayout
-            android:id="@+id/textsReport"
+            android:id="@+id/l1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center">
 
             <ImageButton
-                android:id="@+id/btn_pedra"
+                android:id="@+id/btnPedra"
                 android:layout_width="130dp"
                 android:layout_height="130dp"
                 android:layout_marginTop="20dp"
@@ -31,7 +31,7 @@
                 android:src="@drawable/pedra"/>
 
             <ImageButton
-                android:id="@+id/btn_papel"
+                android:id="@+id/btnPapel"
                 android:layout_width="130dp"
                 android:layout_height="130dp"
                 android:layout_marginTop="20dp"
@@ -42,7 +42,7 @@
                 android:src="@drawable/papel"/>
 
             <ImageButton
-                android:id="@+id/btn_tesoura"
+                android:id="@+id/btnTesoura"
                 android:layout_width="130dp"
                 android:layout_height="130dp"
                 android:layout_marginTop="20dp"
@@ -53,7 +53,7 @@
                 android:src="@drawable/tesoura"/>
 
             <Button
-                android:id="@+id/btn_ver_historico"
+                android:id="@+id/btnHistorico"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
