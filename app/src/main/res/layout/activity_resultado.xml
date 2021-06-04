@@ -4,40 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Resultado">
+    tools:context=".ResultadoActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/txtSuaEscolha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sua escolha:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="100dp"
-            android:layout_marginRight="45dp"
-            android:layout_marginLeft="45dp" >
+    <ImageView
+        android:id="@+id/imgvSuaEscolha"
+        android:layout_marginTop="10sp"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:scaleType="centerCrop"
+        app:layout_constraintVertical_bias="0.01"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSuaEscolha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/white"
+        android:src="@drawable/pedra"/>
 
-            <TextView
-                android:id="@+id/jogador"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20sp"
-                android:textSize="20sp" />
+    <TextView
+        android:id="@+id/txtAppEscolha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escolha do App:"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSuaEscolha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
-            <TextView
-                android:id="@+id/computador"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10sp"
-                android:textSize="20sp" />
+    <ImageView
+        android:id="@+id/imgvAppEscolha"
+        android:layout_marginTop="10sp"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:scaleType="centerCrop"
+        app:layout_constraintVertical_bias="0.01"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAppEscolha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/white"
+        android:src="@drawable/pedra"/>
 
-            <TextView
-                android:id="@+id/resultado"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10sp"
-                android:textSize="20sp" />
-        </LinearLayout>
-    </RelativeLayout>
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resultado"
+        android:textSize="30sp"
+        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgvAppEscolha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
