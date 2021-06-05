@@ -15,16 +15,16 @@ public class MainActivity extends AppCompatActivity {
     public static final int PEDRA = 0;
     public static final int PAPEL = 1;
     public static final int TESOURA = 2;
-
-    public static int vitorias = 0;
-    public static int derrotas = 0;
-    public static int empates = 0;
-
     public static final String OPCAO = "opcao";
-    
+
+    public static int vitorias ;
+    public static int derrotas;
+    public static int empates ;
+
     private static List<String> lista;
-    
+
     private Intent intent;
+    private SharedPreferences preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,43 +34,37 @@ public class MainActivity extends AppCompatActivity {
         intent = new Intent(getBaseContext(), ResultadoActivity.class);
         lista = new ArrayList<>();
 
-        carregarDados();
+        preferences = getSharedPreferences("pref", MODE_PRIVATE);
+
+        vitorias = preferences.getInt("vitorias", 0);
+        empates = preferences.getInt("empates", 0);
+        derrotas = preferences.getInt("derrotas", 0);
     }
 
     public static List<String> getListaDeResultados() {
         return lista;
     }
-    
-    public void jogarPedra(View view) {
-        intent.putExtra(OPCAO, PEDRA);
-        startActivity(intent);
-    }
 
-    public void jogarPapel(View view) {
-        intent.putExtra(OPCAO, PAPEL);
-        startActivity(intent);
-    }
+    public void jogar(View view) {
+        String tag = view.getTag().toString();
 
-    public void jogarTesoura(View view) {
-        intent.putExtra(OPCAO, TESOURA);
-        startActivity(intent);
-    }
-
-    public void gereHistorico(View view) {
-        if(lista.isEmpty()) {
-            Toast.makeText(this, "Não há jogos registrados!", Toast.LENGTH_SHORT).show();
-            return;
+        if (tag.equals("pedra")) {
+            intent.putExtra(OPCAO, PEDRA);
+        } else if(tag.equals("papel")) {
+            intent.putExtra(OPCAO, PAPEL);
+        } else {
+            intent.putExtra(OPCAO, TESOURA);
         }
 
-        Intent intentHistorico = new Intent(getBaseContext(), HistoricoActivity.class);
-        startActivity(intentHistorico);
-
+        startActivity(intent);
     }
 
-    private void carregarDados()  {
-        SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
-        vitorias = pref.getInt("vitorias", 0);
-        derrotas = pref.getInt("derrotas", 0);
-        empates = pref.getInt("empates", 0);
+    public void verHistorico(View view) {
+        if(lista.isEmpty()) {
+            Toast.makeText(this, "Não há jogos registrados!", Toast.LENGTH_SHORT).show();
+        } else {
+            Intent intentHistorico = new Intent(getBaseContext(), HistoricoActivity.class);
+            startActivity(intentHistorico);
+        }
     }
 }

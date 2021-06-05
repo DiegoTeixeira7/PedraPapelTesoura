@@ -10,60 +10,56 @@
         android:id="@+id/txtSuaEscolha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sua escolha:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="16dp"
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imgvSuaEscolha"
-        android:layout_marginTop="10sp"
-        android:layout_width="150sp"
-        android:layout_height="150sp"
+        android:id="@+id/imgSuaEscolha"
+        android:layout_marginTop="15dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:scaleType="centerCrop"
-        app:layout_constraintVertical_bias="0.01"
+        app:layout_constraintVertical_bias="0.02"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSuaEscolha"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:background="@color/white"
-        android:src="@drawable/pedra"/>
+        android:src="@drawable/papel"/>
 
     <TextView
         android:id="@+id/txtAppEscolha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Escolha do App:"
-        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintVertical_bias="0.35"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSuaEscolha"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imgvAppEscolha"
-        android:layout_marginTop="10sp"
-        android:layout_width="150sp"
-        android:layout_height="150sp"
+        android:id="@+id/imgAppEscolha"
+        android:layout_marginTop="15dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:scaleType="centerCrop"
-        app:layout_constraintVertical_bias="0.01"
+        app:layout_constraintVertical_bias="0.02"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtAppEscolha"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:background="@color/white"
-        android:src="@drawable/pedra"/>
+        android:src="@drawable/tesoura"/>
 
     <TextView
-        android:id="@+id/tvResultado"
+        android:id="@+id/resultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Resultado"
-        android:textSize="30sp"
-        app:layout_constraintVertical_bias="0.2"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgvAppEscolha"
+        app:layout_constraintTop_toBottomOf="@+id/imgAppEscolha"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />

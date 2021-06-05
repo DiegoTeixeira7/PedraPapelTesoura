@@ -8,23 +8,22 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Resultados históricos"
-            android:textSize="30sp"
+            android:text="@string/resultados_historicos"
+            android:textSize="25sp"
             />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:baselineAligned="false"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -32,15 +31,36 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="Vitórias: "
+                android:text="@string/vitorias"
                 />
 
             <TextView
-                android:id="@+id/txt_vitorias"
+                android:id="@+id/vitorias"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="0"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/empates"
+                />
+
+            <TextView
+                android:id="@+id/empates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 />
         </LinearLayout>
 
@@ -48,7 +68,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:baselineAligned="false"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -56,39 +75,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="Empates: "
+                android:text="@string/derrotas"
                 />
 
             <TextView
-                android:id="@+id/txt_empates"
+                android:id="@+id/derrotas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="0"
-                />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:baselineAligned="false"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="Derrotas: "
-                />
-
-            <TextView
-                android:id="@+id/txt_derrotas"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="0"
                 />
         </LinearLayout>
 
@@ -98,13 +92,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="25dp"
-            android:text="Últimos jogos"
-            android:textSize="30sp"
+            android:text="@string/ultimos_jogos"
+            android:textSize="25sp"
             />
 
         <ListView
             android:id="@+id/listView"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>

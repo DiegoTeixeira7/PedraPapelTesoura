@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Pedra, Papel, Tesoura</string>
+    <string name="ultimos_jogos">Últimos jogos</string>
+    <string name="derrotas">Derrotas:</string>
+    <string name="empates">Empates:</string>
+    <string name="vitorias">Vitórias:</string>
+    <string name="resultados_historicos">Resultados históricos</string>
 </resources>

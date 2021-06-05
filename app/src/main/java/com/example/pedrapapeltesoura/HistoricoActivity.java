@@ -15,13 +15,13 @@ public class HistoricoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_historico);
         getSupportActionBar().hide();
 
-        TextView txtVitorias = findViewById(R.id.txt_vitorias);
-        TextView txtDerrotas = findViewById(R.id.txt_derrotas);
-        TextView txtEmpates = findViewById(R.id.txt_empates);
+        TextView vitorias = findViewById(R.id.vitorias);
+        TextView derrotas = findViewById(R.id.derrotas);
+        TextView empates = findViewById(R.id.empates);
 
-        txtVitorias.setText(MainActivity.vitorias+"");
-        txtDerrotas.setText(MainActivity.derrotas+"");
-        txtEmpates.setText(MainActivity.empates+"");
+        vitorias.setText(String.valueOf(MainActivity.vitorias));
+        derrotas.setText(String.valueOf(MainActivity.derrotas));
+        empates.setText(String.valueOf(MainActivity.empates));
 
         ListView lista = findViewById(R.id.listView);
 

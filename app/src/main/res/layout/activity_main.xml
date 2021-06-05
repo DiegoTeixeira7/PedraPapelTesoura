@@ -7,69 +7,71 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/titulo"
-        android:layout_marginTop="30sp"
+        android:id="@+id/txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Clique em uma das imagens para escolher"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="16dp" />
 
     <ImageButton
-        android:id="@+id/btn_pedra"
-        android:layout_marginTop="30sp"
-        android:layout_width="150sp"
-        android:layout_height="150sp"
-        android:onClick="jogarPedra"
+        android:id="@+id/btnPedra"
+        android:layout_marginTop="20dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:onClick="jogar"
+        android:tag="pedra"
         android:scaleType="centerCrop"
-        app:layout_constraintVertical_bias="0.01"
+        app:layout_constraintVertical_bias="0.02"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titulo"
+        app:layout_constraintTop_toBottomOf="@+id/txt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:background="@color/white"
         android:src="@drawable/pedra"/>
 
     <ImageButton
-        android:id="@+id/btn_papel"
-        android:layout_width="150sp"
-        android:layout_height="150sp"
-        android:onClick="jogarPapel"
+        android:id="@+id/btnPapel"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:onClick="jogar"
+        android:tag="papel"
         android:scaleType="centerCrop"
         app:layout_constraintVertical_bias="0.03"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_pedra"
+        app:layout_constraintTop_toBottomOf="@+id/btnPedra"
         android:background="@color/white"
         android:src="@drawable/papel"/>
 
     <ImageButton
-        android:id="@+id/btn_tesoura"
-        android:layout_width="150sp"
-        android:layout_height="150sp"
-        android:onClick="jogarTesoura"
+        android:id="@+id/btnTesoura"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:onClick="jogar"
+        android:tag="tesoura"
         android:scaleType="centerCrop"
-        app:layout_constraintVertical_bias="0.05"
+        app:layout_constraintVertical_bias="0.04"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_papel"
+        app:layout_constraintTop_toBottomOf="@+id/btnPapel"
         android:background="@color/white"
         android:src="@drawable/tesoura"/>
 
-    <ImageButton
-        android:id="@+id/btn_ver_historico"
-        android:layout_width="53dp"
-        android:layout_height="45dp"
-        android:onClick="gereHistorico"
+    <Button
+        android:id="@+id/btnVerHistorico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="verHistorico"
+        android:text="Histórico"
         android:layout_alignParentBottom="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_tesoura"
-        android:background="@color/white"
-        android:src="@drawable/ic_baseline_settings_backup_restore_24"/>
+        app:layout_constraintTop_toBottomOf="@+id/btnTesoura" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
