@@ -15,23 +15,23 @@ public class HistoricoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_historico);
         getSupportActionBar().hide();
 
-        TextView vitorias = findViewById(R.id.vitorias);
-        TextView derrotas = findViewById(R.id.derrotas);
-        TextView empates = findViewById(R.id.empates);
+        TextView Vitorias = findViewById(R.id.vitorias);
+        TextView Derrotas = findViewById(R.id.derrotas);
+        TextView Empates = findViewById(R.id.empates);
 
-        vitorias.setText(String.valueOf(MainActivity.vitorias));
-        derrotas.setText(String.valueOf(MainActivity.derrotas));
-        empates.setText(String.valueOf(MainActivity.empates));
+        Vitorias.setText(String.valueOf(MainActivity.vitorias));
+        Derrotas.setText(String.valueOf(MainActivity.derrotas));
+        Empates.setText(String.valueOf(MainActivity.empates));
 
-        ListView lista = findViewById(R.id.listView);
+        ListView listView = findViewById(R.id.listView);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
-          getApplicationContext(),
+          this,
           android.R.layout.simple_list_item_1,
           android.R.id.text1,
           MainActivity.getListaDeResultados().toArray(new String[0])
         );
 
-        lista.setAdapter(adapter);
+        listView.setAdapter(adapter);
     }
 }

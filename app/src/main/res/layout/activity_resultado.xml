@@ -17,7 +17,7 @@
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imgSuaEscolha"
+        android:id="@+id/imgJogador"
         android:layout_marginTop="15dp"
         android:layout_width="140dp"
         android:layout_height="140dp"
@@ -43,7 +43,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imgAppEscolha"
+        android:id="@+id/imgApp"
         android:layout_marginTop="15dp"
         android:layout_width="140dp"
         android:layout_height="140dp"
