@@ -19,9 +19,13 @@ public class HistoricoActivity extends AppCompatActivity {
         TextView Derrotas = findViewById(R.id.txt_derrotas);
         TextView Empates = findViewById(R.id.txt_empates);
 
-        Vitorias.setText(String.valueOf(MainActivity.vitorias));
-        Derrotas.setText(String.valueOf(MainActivity.derrotas));
-        Empates.setText(String.valueOf(MainActivity.empates));
+        Integer v = MainActivity.vitorias;
+        Integer d = MainActivity.derrotas;
+        Integer e = MainActivity.empates;
+
+        Vitorias.setText(v.toString());
+        Derrotas.setText(d.toString());
+        Empates.setText(e.toString());
 
         ListView listView = findViewById(R.id.listView);
 
