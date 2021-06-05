@@ -3,6 +3,7 @@ package com.example.pedrapapeltesoura;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -14,6 +15,10 @@ public class MainActivity extends AppCompatActivity {
     public static final int PEDRA = 0;
     public static final int PAPEL = 1;
     public static final int TESOURA = 2;
+
+    public static int vitorias = 0;
+    public static int derrotas = 0;
+    public static int empates = 0;
 
     public static final String OPCAO = "opcao";
     
@@ -28,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         intent = new Intent(getBaseContext(), ResultadoActivity.class);
         lista = new ArrayList<>();
+
+        carregarDados();
     }
 
     public static List<String> getListaDeResultados() {
@@ -58,5 +65,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intentHistorico = new Intent(getBaseContext(), HistoricoActivity.class);
         startActivity(intentHistorico);
 
+    }
+
+    private void carregarDados()  {
+        SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
+        vitorias = pref.getInt("vitorias", 0);
+        derrotas = pref.getInt("derrotas", 0);
+        empates = pref.getInt("empates", 0);
     }
 }

@@ -2,6 +2,7 @@ package com.example.pedrapapeltesoura;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -11,7 +12,6 @@ import java.security.SecureRandom;
 
 
 public class ResultadoActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,33 +56,50 @@ public class ResultadoActivity extends AppCompatActivity {
         if(opcaoApp == opcaoUsuario) {
             textView.setText("Empate!");
             MainActivity.getListaDeResultados().add("Emapte");
+            MainActivity.empates++;
         } else {
             if(opcaoUsuario == MainActivity.PAPEL) {
                 if(opcaoApp == MainActivity.PEDRA) {
                     textView.setText("Você ganhou!");
                     MainActivity.getListaDeResultados().add("Vitória");
+                    MainActivity.vitorias++;
                 } else {
                     textView.setText("Você perdeu!");
                     MainActivity.getListaDeResultados().add("Derrota");
+                    MainActivity.derrotas++;
                 }
             } else if(opcaoUsuario == MainActivity.PEDRA) {
                 if (opcaoApp == MainActivity.PAPEL) {
                     textView.setText("Você perdeu!");
                     MainActivity.getListaDeResultados().add("Derrota");
+                    MainActivity.derrotas++;
                 } else {
                     textView.setText("Você ganhou!");
                     MainActivity.getListaDeResultados().add("Vitória");
+                    MainActivity.vitorias++;
                 }
             } else if(opcaoUsuario == MainActivity.TESOURA) {
                 if (opcaoApp == MainActivity.PEDRA) {
                     textView.setText("Você perdeu!");
                     MainActivity.getListaDeResultados().add("Derrota");
+                    MainActivity.derrotas++;
                 } else {
                     textView.setText("Você ganhou!");
                     MainActivity.getListaDeResultados().add("Vitória");
+                    MainActivity.vitorias++;
                 }
             }
         }
+
+        salvarDados();
+    }
+
+    private void salvarDados()  {
+        SharedPreferences.Editor editor = getSharedPreferences("pref", MODE_PRIVATE).edit();
+        editor.putInt("vitorias", MainActivity.vitorias);
+        editor.putInt("derrotas", MainActivity.derrotas);
+        editor.putInt("empates", MainActivity.empates);
+        editor.commit();
     }
 
     @Override
