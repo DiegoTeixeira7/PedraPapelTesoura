@@ -1,14 +1,12 @@
 package com.example.pedrapapeltesoura;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.ListActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
-public class HistoricoActivity extends ListActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class HistoricoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

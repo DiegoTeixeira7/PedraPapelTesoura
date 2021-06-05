@@ -2,7 +2,6 @@ package com.example.pedrapapeltesoura;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -10,7 +9,6 @@ import android.widget.Toast;
 
 import java.security.SecureRandom;
 
-import javax.xml.transform.Source;
 
 public class ResultadoActivity extends AppCompatActivity {
 
@@ -62,26 +60,26 @@ public class ResultadoActivity extends AppCompatActivity {
             if(opcaoUsuario == MainActivity.PAPEL) {
                 if(opcaoApp == MainActivity.PEDRA) {
                     textView.setText("Você ganhou!");
-                    MainActivity.getListaDeResultados().add("Vitória!");
+                    MainActivity.getListaDeResultados().add("Vitória");
                 } else {
                     textView.setText("Você perdeu!");
-                    MainActivity.getListaDeResultados().add("Derrota!");
+                    MainActivity.getListaDeResultados().add("Derrota");
                 }
             } else if(opcaoUsuario == MainActivity.PEDRA) {
                 if (opcaoApp == MainActivity.PAPEL) {
                     textView.setText("Você perdeu!");
-                    MainActivity.getListaDeResultados().add("Derrota!");
+                    MainActivity.getListaDeResultados().add("Derrota");
                 } else {
                     textView.setText("Você ganhou!");
-                    MainActivity.getListaDeResultados().add("Vitória!");
+                    MainActivity.getListaDeResultados().add("Vitória");
                 }
             } else if(opcaoUsuario == MainActivity.TESOURA) {
                 if (opcaoApp == MainActivity.PEDRA) {
                     textView.setText("Você perdeu!");
-                    MainActivity.getListaDeResultados().add("Derrota!");
+                    MainActivity.getListaDeResultados().add("Derrota");
                 } else {
                     textView.setText("Você ganhou!");
-                    MainActivity.getListaDeResultados().add("Vitória!");
+                    MainActivity.getListaDeResultados().add("Vitória");
                 }
             }
         }

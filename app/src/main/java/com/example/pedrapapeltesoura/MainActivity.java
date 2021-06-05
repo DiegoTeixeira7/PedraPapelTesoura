@@ -53,9 +53,10 @@ public class MainActivity extends AppCompatActivity {
         if(lista.isEmpty()) {
             Toast.makeText(this, "Não há jogos registrados!", Toast.LENGTH_SHORT).show();
             return;
-        } else {
-            Intent intentHistorico = new Intent(getBaseContext(), HistoricoActivity.class);
-            startActivity(intentHistorico);
         }
+
+        Intent intentHistorico = new Intent(getBaseContext(), HistoricoActivity.class);
+        startActivity(intentHistorico);
+
     }
 }
