@@ -10,9 +10,10 @@
         android:id="@+id/txtSuaEscolha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Sua escolha:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="16dp"
+        android:textSize="15dp"
         tools:ignore="MissingConstraints" />
 
     <ImageView
@@ -34,6 +35,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintVertical_bias="0.35"
+        android:text="Escolha do app:"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSuaEscolha"
         app:layout_constraintEnd_toEndOf="parent"

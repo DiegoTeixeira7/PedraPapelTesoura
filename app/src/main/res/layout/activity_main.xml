@@ -13,8 +13,8 @@
         android:text="Clique em uma das imagens para escolher"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="16dp" />
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageButton
         android:id="@+id/btnPedra"
