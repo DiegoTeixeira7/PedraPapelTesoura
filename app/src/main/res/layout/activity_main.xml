@@ -1,74 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Clique em uma das imagens para escolher"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:textSize="15dp"
-        tools:ignore="MissingConstraints" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:gravity="center">
 
-    <ImageButton
-        android:id="@+id/btnPedra"
-        android:layout_marginTop="20dp"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:onClick="btnPedra"
-        android:scaleType="centerCrop"
-        app:layout_constraintVertical_bias="0.02"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/white"
-        android:src="@drawable/pedra"/>
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
 
-    <ImageButton
-        android:id="@+id/btnPapel"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:onClick="btnPapel"
-        android:scaleType="centerCrop"
-        app:layout_constraintVertical_bias="0.03"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnPedra"
-        android:background="@color/white"
-        android:src="@drawable/papel"/>
+            <TextView
+                android:id="@+id/txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clique em uma das imagens para escolher" />
 
-    <ImageButton
-        android:id="@+id/btnTesoura"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:onClick="btnTesoura"
-        android:scaleType="centerCrop"
-        app:layout_constraintVertical_bias="0.04"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnPapel"
-        android:background="@color/white"
-        android:src="@drawable/tesoura"/>
+            <ImageButton
+                android:id="@+id/btnPedra"
+                android:layout_marginTop="25dp"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:onClick="btnPedra"
+                android:scaleType="centerCrop"
+                android:background="@color/white"
+                android:src="@drawable/pedra"/>
 
-    <Button
-        android:id="@+id/btnVerHistorico"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="historico"
-        android:text="Histórico"
-        android:layout_alignParentBottom="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnTesoura" />
+            <ImageButton
+                android:id="@+id/btnPapel"
+                android:layout_marginTop="25dp"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:onClick="btnPapel"
+                android:scaleType="centerCrop"
+                android:background="@color/white"
+                android:src="@drawable/papel"/>
 
+            <ImageButton
+                android:id="@+id/btnTesoura"
+                android:layout_marginTop="25dp"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:onClick="btnTesoura"
+                android:scaleType="centerCrop"
+                android:background="@color/white"
+                android:src="@drawable/tesoura"/>
+
+            <Button
+                android:id="@+id/btnHistorico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Historico"
+                android:onClick="historico"
+                android:layout_alignParentBottom="true" />
+
+        </LinearLayout>
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,9 +15,9 @@ public class HistoricoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_historico);
         getSupportActionBar().hide();
 
-        TextView Vitorias = findViewById(R.id.vitorias);
-        TextView Derrotas = findViewById(R.id.derrotas);
-        TextView Empates = findViewById(R.id.empates);
+        TextView Vitorias = findViewById(R.id.txt_vitorias);
+        TextView Derrotas = findViewById(R.id.txt_derrotas);
+        TextView Empates = findViewById(R.id.txt_empates);
 
         Vitorias.setText(String.valueOf(MainActivity.vitorias));
         Derrotas.setText(String.valueOf(MainActivity.derrotas));

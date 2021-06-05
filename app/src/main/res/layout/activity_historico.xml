@@ -9,21 +9,21 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/resultados_historicos"
-            android:textSize="25sp"
+            android:text="Resultados históricos"
+            android:textSize="22dp"
             />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="12dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -31,11 +31,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="@string/vitorias"
+                android:text="Vitorias: "
                 />
 
             <TextView
-                android:id="@+id/vitorias"
+                android:id="@+id/txt_vitorias"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -45,7 +45,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="12dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -53,11 +53,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="@string/empates"
+                android:text="Empates: "
                 />
 
             <TextView
-                android:id="@+id/empates"
+                android:id="@+id/txt_empates"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -67,7 +67,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="12dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -75,11 +75,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="@string/derrotas"
+                android:text="Derrotas: "
                 />
 
             <TextView
-                android:id="@+id/derrotas"
+                android:id="@+id/txt_derrotas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -91,14 +91,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="25dp"
-            android:text="@string/ultimos_jogos"
-            android:textSize="25sp"
+            android:layout_marginTop="22dp"
+            android:text="Últimos jogos"
+            android:textSize="22dp"
             />
 
         <ListView
             android:id="@+id/listView"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="22dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>
