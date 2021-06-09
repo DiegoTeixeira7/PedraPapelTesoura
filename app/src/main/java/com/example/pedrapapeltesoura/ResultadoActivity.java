@@ -12,6 +12,8 @@ import java.security.SecureRandom;
 
 
 public class ResultadoActivity extends AppCompatActivity {
+    private SharedPreferences.Editor editor;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +25,8 @@ public class ResultadoActivity extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
         int opcaoUsuario = bundle.getInt(MainActivity.OPCAO);
+
+
 
         switch (opcaoUsuario) {
             case MainActivity.PAPEL:
@@ -95,7 +99,7 @@ public class ResultadoActivity extends AppCompatActivity {
     }
 
     private void salvarDados()  {
-        SharedPreferences.Editor editor = getSharedPreferences("pref", MODE_PRIVATE).edit();
+        editor = MainActivity.pref.edit();
         editor.putInt("vitorias", MainActivity.vitorias);
         editor.putInt("derrotas", MainActivity.derrotas);
         editor.putInt("empates", MainActivity.empates);

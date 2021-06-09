@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     
     private Intent intent;
 
+    public static SharedPreferences pref;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +36,10 @@ public class MainActivity extends AppCompatActivity {
         intent = new Intent(getBaseContext(), ResultadoActivity.class);
         lista = new ArrayList<>();
 
-        carregarDados();
+        pref = getSharedPreferences("pref", 0);
+        if(pref.contains("vitorias") || pref.contains("empates") || pref.contains("derrotas")){
+            carregarDados();
+        }
     }
 
     public static List<String> getListaDeResultados() {
@@ -68,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void carregarDados()  {
-        SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
         vitorias = pref.getInt("vitorias", 0);
         derrotas = pref.getInt("derrotas", 0);
         empates = pref.getInt("empates", 0);
