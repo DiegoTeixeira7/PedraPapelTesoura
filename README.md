@@ -13,7 +13,7 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 ### :arrow_forward: Em Execução:
 
 <p align="center">
- <img alt="Demontração Pedra, papel, tesoura" src="jokenpo.gif" width="404px" heigth="720px">
+ <img alt="Demonstração Pedra, papel, tesoura" src="jokenpo.gif" width="404px" heigth="720px">
 </p>
 
 ### :information_source: Como usar:
@@ -27,3 +27,5 @@ $ git clone https://github.com/DiegoTeixeira7/PedraPapelTesoura.git
 # Abra o projeto em seu Android Studio e execute
 
 ```
+### :memo: Licença
+Este projeto está sob a licença do MIT. Consulte a [LICENSE](https://github.com/DiegoTeixeira7/PedraPapelTesoura/blob/master/LICENSE) para obter mais informações.
